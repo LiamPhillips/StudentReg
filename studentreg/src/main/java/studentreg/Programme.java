@@ -58,18 +58,18 @@ public class Programme {
         
         ArrayList<Module> modules = new ArrayList<Module>();
         modules = this.getListofModules();
-        for (int i=0 ; i<modules.size() ; i++){
-            Module m = modules.get(i);
+        for (int x=0 ; x<modules.size() ; x++){
+            Module m = modules.get(x);
             ArrayList<Student> ModuleStudents = new ArrayList<Student>();
             ModuleStudents = m.getListofStudents();
-            for (int j=0 ; j<ModuleStudents.size();j++){
-                Student s = ModuleStudents.get(j);
+            for (int y=0 ; y<ModuleStudents.size();y++){
+                Student s = ModuleStudents.get(y);
                 if (s.getCourse().equals(this.getCourseName()) && !(CourseStudents.contains(s))){
                     CourseStudents.add(s);
-                    System.out.println(s.getName() + "\t Course: " + s.getCourse());
-                    System.out.print("\t Modules: ");
-                    for(int k=0; k<modules.size();k++){
-                        System.out.print(modules.get(k).getName() + " -- ");
+                    System.out.println(s.getName() + "\t , Course: " + s.getCourse());
+                    System.out.print(" Modules: ");
+                    for(int z=0; z<modules.size();z++){
+                        System.out.print(modules.get(z).getName() + " ; ");
                     }
                     System.out.println();
                 }
